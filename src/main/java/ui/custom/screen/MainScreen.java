@@ -24,7 +24,7 @@ import ui.custom.button.ResetButton;
 import ui.custom.frame.MainFrame;
 import ui.custom.input.NumberText;
 import ui.custom.panel.MainPanel;
-import ui.custom.panel.SudokoSector;
+import ui.custom.panel.SudokuSector;
 
 public class MainScreen {
     private final static Dimension dimension = new Dimension(601, 800);
@@ -74,7 +74,7 @@ public class MainScreen {
     private JPanel generateSection(final List<Space> spaces) {
         List<NumberText> fields = new ArrayList<>(spaces.stream().map(NumberText::new).toList());
         fields.forEach(t -> notifierService.subscribe(CLEAR_SPACE, t));
-        return new SudokoSector(fields);
+        return new SudokuSector(fields);
     }
 
     private void addCheckedGameStatusButton(final JPanel mainPanel) {

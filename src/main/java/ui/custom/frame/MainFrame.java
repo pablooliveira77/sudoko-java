@@ -7,7 +7,7 @@ import javax.swing.JPanel;
 
 public class MainFrame extends JFrame {
     public MainFrame(final Dimension dimension, final JPanel mainPanel) {
-        super("Sudoko");
+        super("Sudoku");
         this.setSize(dimension);
         this.setPreferredSize(dimension);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);

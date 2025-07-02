@@ -10,8 +10,8 @@ import ui.custom.input.NumberText;
 
 import static java.awt.Color.black;
 
-public class SudokoSector extends JPanel {
-    public SudokoSector(final List<NumberText> textFields) {
+public class SudokuSector extends JPanel {
+    public SudokuSector(final List<NumberText> textFields) {
         var dimension = new Dimension(170, 170);
         this.setSize(dimension);
         this.setPreferredSize(dimension);

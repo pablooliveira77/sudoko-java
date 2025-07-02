@@ -1,12 +1,12 @@
-import java.awt.Dimension;
+// import java.awt.Dimension;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+// import javax.swing.JFrame;
+// import javax.swing.JPanel;
 
-import ui.custom.frame.MainFrame;
-import ui.custom.panel.MainPanel;
+// import ui.custom.frame.MainFrame;
+// import ui.custom.panel.MainPanel;
 import ui.custom.screen.MainScreen;
 
 public class UiMain {

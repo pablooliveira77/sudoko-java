@@ -64,6 +64,3 @@ public class Board {
     }
 
 }
-
-// Adicionando requisitos adicionais
-// Testar Jogo do Sudoko

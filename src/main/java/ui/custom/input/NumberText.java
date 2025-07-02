@@ -1,15 +1,20 @@
 package ui.custom.input;
 
+import static java.awt.Font.PLAIN;
+import static service.EventEnum.CLEAR_SPACE;
+
 import java.awt.Dimension;
 import java.awt.Font;
+
 import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
-import static java.awt.Font.PLAIN;
-
 import model.Space;
+import service.EventEnum;
+import service.EventListener;
 
-public class NumberText extends JTextField {
+public class NumberText extends JTextField implements EventListener {
     private final Space space;
 
     public NumberText(final Space space) {
@@ -27,17 +32,17 @@ public class NumberText extends JTextField {
         }
         this.getDocument().addDocumentListener(new DocumentListener() {
             @Override
-            public void insertUpdate(javax.swing.event.DocumentEvent e) {
+            public void insertUpdate(DocumentEvent e) {
                 changeSpace();
             }
 
             @Override
-            public void removeUpdate(javax.swing.event.DocumentEvent e) {
+            public void removeUpdate(DocumentEvent e) {
                 changeSpace();
             }
 
             @Override
-            public void changedUpdate(javax.swing.event.DocumentEvent e) {
+            public void changedUpdate(DocumentEvent e) {
                 changeSpace();
             }
 
@@ -50,5 +55,11 @@ public class NumberText extends JTextField {
             }
 
         });
+    }
+
+    public void update(final EventEnum eventType) {
+        if (eventType.equals(CLEAR_SPACE) && this.isEnabled()) {
+            this.setText("");
+        }
     }
 }

@@ -13,7 +13,8 @@ public class NumberTextLimit extends PlainDocument {
 
     @Override
     public void insertString(int offs, String str, AttributeSet a) {
-        if (isNull(str) || NUMBERS.contains(str)) return;
+        // System.out.println("Inserting string: " + NUMBERS.contains(str));
+        if (isNull(str) || !NUMBERS.contains(str)) return;
 
         if (getLength() + str.length() <= 1) {
             try {
